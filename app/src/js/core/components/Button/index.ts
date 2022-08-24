@@ -9,7 +9,7 @@ const buttonHandler = () => {
 
 const buttonClass = styles.button;
 
-const Button = ({ containerName, text, cls = '' }: ButtonProps): void => {
+export const Button = ({ containerName, text, cls = '' }: ButtonProps): void => {
   const button = document.createElement('button');
   button.innerText = text;
   button.classList.add(cls);
@@ -23,5 +23,3 @@ const Button = ({ containerName, text, cls = '' }: ButtonProps): void => {
     container.append(button);
   }
 };
-
-export default Button;

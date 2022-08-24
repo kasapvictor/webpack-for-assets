@@ -42,6 +42,7 @@
     "axios": "^0.26.1",
     "lodash": "^4.17.21",
     "on-change": "^4.0.0",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
     "yup": "^0.32.11"
   }
 }
