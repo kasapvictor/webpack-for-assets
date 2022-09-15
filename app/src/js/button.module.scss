@@ -1,0 +1,11 @@
+.button {
+  padding: 20px 30px;
+  font-size: 20px;
+  border: 1px solid green;
+  color: green;
+
+  &:hover {
+    color: #fff;
+    background: #333;
+  }
+}

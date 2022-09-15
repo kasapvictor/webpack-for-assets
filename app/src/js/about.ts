@@ -9,8 +9,5 @@ import '@fontsource/material-icons-two-tone';
 
 import '../scss/styles.scss';
 
-import { app } from '@app/app';
-import { page } from '@app/page';
-
-app();
-page();
+// eslint-disable-next-line no-console
+console.log('ABOUT PAGE');

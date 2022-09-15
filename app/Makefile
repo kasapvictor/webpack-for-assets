@@ -1,11 +1,8 @@
 install:
 	npm ci || npm install
 
-rm-rf-css:
-	rm -rf public/css
-
-rm-rf-js:
-	rm -rf public/js
+rm-rf-dist:
+	rm -rf dist
 
 server:
 	NODE_ENV=development npx webpack serve
@@ -16,13 +13,15 @@ pretty:
 lint:
 	npx eslint --fix src/js
 
-build-prod: rm-rf-css rm-rf-js pretty lint
+pre-commit: pretty lint
+
+build-prod: rm-rf-dist pretty lint
 	NODE_ENV=production npx webpack --mode production
 
-build-dev: rm-rf-css rm-rf-js
+build-dev: rm-rf-dist
 	NODE_ENV=development npx webpack --mode development
 
-watch: rm-rf-css rm-rf-js
+watch: rm-rf-dist
 	NODE_ENV=development npx webpack --watch
 
 # for browser-sync
